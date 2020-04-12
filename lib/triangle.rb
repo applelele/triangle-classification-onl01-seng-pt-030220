@@ -7,7 +7,7 @@ class Triangle
   end
 
   def kind
-    if (negative? == true) || (valid? == false)
+    if (negative? == true || valid? == false)
       begin
        raise TriangleError
      rescue TriangleError => error
