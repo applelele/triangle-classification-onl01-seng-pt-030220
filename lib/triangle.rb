@@ -30,6 +30,7 @@ class Triangle
         return true
       end
     end
+    binding.pry
   end
 
   def valid?
