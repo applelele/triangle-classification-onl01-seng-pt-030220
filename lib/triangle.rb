@@ -7,21 +7,18 @@ class Triangle
   end
 
   def kind
-    if
-      #|| (self.side == nil && self.side2 == nil && self.side3 == nil)
-
+    if (negative? == true) || !valid?
       begin
        raise TriangleError
      rescue TriangleError => error
          puts error.message
      end
-     elsif self.side1 == self.side2 && self.side2 == self.side3
+   elsif self.equilateral
       return :equilateral
-    elsif self.side1 == self.side2 || self.side1 == self.side3 || self.side2 == self.side3
+    elsif self.isosceles
       return :isosceles
-    elsif (self.side1 > 0 && self.side2 > 0 && self.side3 > 0) && ()
+    elsif self.scalene
       return :scalene
-
     end
   end
 
