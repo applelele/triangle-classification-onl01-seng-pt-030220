@@ -51,7 +51,7 @@ class Triangle
 
   class TriangleError < StandardError
       def message
-        "Please provide a triangle."
+        "Please provide valid lengths for the triangle."
       end
   end
 end
