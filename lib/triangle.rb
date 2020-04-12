@@ -7,7 +7,7 @@ class Triangle
     @side3 = side3
   end
 
-  def kind
+  def kind(side1, side2, side3)
     if  (self.side1 < 0 || self.side2 < 0 || self.side3 < 0) #|| (self.side == nil && self.side2 == nil && self.side3 == nil) || !((self.side1 + self.side2) > self.side3 || (self.side2 + self.side3) > self.side1 || (self.side1 + self.side3 > self.side2))
       begin
        raise TriangleError
