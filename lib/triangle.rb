@@ -10,7 +10,7 @@ class Triangle
   end
 
   def kind
-    if (negative? == true || valid? == false)
+    if negative? == true || valid? == false
       begin
        raise TriangleError
      rescue TriangleError => error
@@ -27,7 +27,7 @@ class Triangle
 
   def negative?
     @sides.each do |length|
-      if (length <= 0)
+      if length <= 0
         return true
       end
     end
