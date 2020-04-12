@@ -30,8 +30,8 @@ class Triangle
         return true
       end
     end
-    binding.pry
   end
+      binding.pry
 
   def valid?
     (side1 + side2) > side3 && (side2 + side3) > side1 && (side1 + side3 > side2)
