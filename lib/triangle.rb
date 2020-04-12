@@ -7,4 +7,14 @@ class Triangle
     @side3 = side3
   end
 
+  def kind
+    if self.side1 == self.side2 && self.side2 == self.side3
+      return :equilateral
+    elsif self.side1 == self.side2 || self.side1 == self.side3 || self.side2 == self.side3
+      return :isosceles
+    else
+      return :scalene
+    end
+  end
+
 end
