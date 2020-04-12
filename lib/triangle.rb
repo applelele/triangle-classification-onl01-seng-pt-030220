@@ -27,7 +27,7 @@ class Triangle
 
   def negative?
     @sides.each do |length|
-      if(length <= 0)
+      if (length <= 0)
         return true
       end
     end
