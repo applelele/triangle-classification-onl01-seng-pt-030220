@@ -25,6 +25,14 @@ class Triangle
     end
   end
 
+  def negative?
+    @sides.each do |length|
+      if length <= 0
+        return true
+      end
+    end
+  end
+
   class TriangleError < StandardError
       def message
         "Please provide a triangle."
