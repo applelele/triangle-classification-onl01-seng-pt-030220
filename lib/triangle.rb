@@ -14,10 +14,19 @@ class Triangle
       return :isosceles
     elsif (self.side1 > 0 && self.side2 > 0 && self.side3 > 0) && ((self.side1 + self.side2) > self.side3 || (self.side2 + self.side3) > self.side1 || (self.side1 + self.side3 > self.side2))
       return :scalene
+    else
+      begin
+       raise TriangleError
+     rescue TriangleError => error
+         puts error.message
+     end
+
     end
   end
 
   class TriangleError < StandardError
-      # triangle error code
+      def message
+        "Please provide a triangle."
+      end
   end
 end
